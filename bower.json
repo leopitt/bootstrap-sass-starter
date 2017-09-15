@@ -1,12 +1,12 @@
 {
-  "name": "venttech",
-  "description": "vent-tech.co.uk site",
+  "name": "",
+  "description": "",
   "main": "index.html",
   "authors": [
-    "Leo Pitt"
+    ""
   ],
   "license": "ISC",
-  "homepage": "https://github.com/leopitt/venttech",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
