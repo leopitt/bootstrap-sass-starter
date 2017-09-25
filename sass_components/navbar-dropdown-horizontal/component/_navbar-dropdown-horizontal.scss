@@ -1,0 +1,50 @@
+/**
+ * Component - navbar-dropdown-horizontal.scss
+ */
+
+// Make sure dropdown-menu still works on mobile
+.navbar-nav {
+  .open .dropdown-menu {
+    display: block;
+  }
+}
+
+@include breakpoint-min($grid-float-breakpoint) {
+  .navbar-nav {
+    > .dropdown {
+      position: static;
+      > .dropdown-wrapper {
+        // Set properties here that are usually used only on .dropdown-menu
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        > .dropdown-menu {
+          // Override various bootstrap properties used to show/hide dropdowns.
+          position: static;
+          float: none;
+          text-align: left;
+          right: 0;
+          left: 0;
+          margin: 0 auto;
+          display: block;
+          > li {
+            display: inline-block;
+          }
+        }
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: -($grid-gutter-width / 2);
+          bottom: 0;
+          left: -($grid-gutter-width / 2) - 1;
+          background: $navbar-dropdown-bg;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/**
+ * State - navbar-dropdown-horizontal.scss
+ */
+
+// Make sure dropdown-menu still works on mobile
+.navbar-nav {
+  .open .dropdown-menu {
+    display: block;
+  }
+}
+
+@include breakpoint-min($grid-float-breakpoint) {
+  .navbar-nav {
+    > .dropdown {
+      position: static;
+      > .dropdown-wrapper {
+        // Give height of zero so the dd is effectively hidden by default
+        transform-origin: 50% 0;
+        transform: scaleY(0);
+        transition: none;
+      }
+      &.open {
+        > .dropdown-wrapper {
+          display: block;
+          z-index: 100;
+          // Give it a height of 100% to reveal the dd
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+}
