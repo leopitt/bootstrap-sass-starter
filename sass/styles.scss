@@ -1,10 +1,18 @@
 // Settings
 @import 'settings/custom';
-// Libraries
+
+// Bootstrap core
 @import 'bootstrap';
+
+// 3rd party libraries
 @import 'font-awesome';
+
+// Custom libraries
+
 // Mixins
 @import 'mixins';
+
+// Bootstrap customisations
 // Base
 @import 'base/base';
 @import 'base/headings';
