@@ -1,5 +1,48 @@
+// Deprecated breakpoint mixin
 @mixin breakpoint($breakpoint) {
+	@include breakpoint-min($breakpoint) {
+		@content;
+	}
+}
+
+// Set styles for inclusion only above a screen size
+@mixin breakpoint-min($breakpoint) {
 	@media screen and (min-width: $breakpoint) {
 		@content;
+	}
+}
+
+// Set styles for inclusion only below a screen size
+@mixin breakpoint-max($breakpoint) {
+	@media screen and (max-width: $breakpoint) {
+		@content;
+	}
+}
+
+// Set various font sizes according to a multiple. Streamline the setting of different font sizes per screen
+// @min-width the screen size to effect above, @body-multiple the amount to multiply the size by.
+@mixin set-base-font-sizes($min-width, $body-multiple) {
+	@media screen and (min-width: $min-width) {
+
+		body {
+		  font-size: ceil($font-size-base * $body-multiple);
+		}
+
+		h1, .h1 { font-size: ceil($font-size-h1 * $body-multiple); }
+		h2, .h2 { font-size: ceil($font-size-h2 * $body-multiple); }
+		h3, .h3 { font-size: ceil($font-size-h3 * $body-multiple); }
+		h4, .h4 { font-size: ceil($font-size-h4 * $body-multiple); }
+		h5, .h5 { font-size: ceil($font-size-h5 * $body-multiple); }
+		h6, .h6 { font-size: ceil($font-size-h6 * $body-multiple); }
+
+		small,
+		.small {
+		  font-size: floor((100% * $font-size-small / ($font-size-base * $body-multiple)));
+		}
+
+		blockquote {
+		  font-size: $blockquote-font-size * $body-multiple;
+		}
+
 	}
 }
