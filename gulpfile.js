@@ -8,7 +8,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('sass', function () {
-  return gulp.src(['sass/**/*.scss','sass_components/**/*.scss'])
+  return gulp.src('sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['> 5%'],
@@ -18,7 +18,7 @@ gulp.task('sass', function () {
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch(['sass/**/*.scss','sass_components/**/*.scss'], ['sass']);
+  gulp.watch('sass/**/*.scss', ['sass']);
 });
 
 gulp.task('modernizr', function() {
