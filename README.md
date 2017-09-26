@@ -9,6 +9,6 @@ Initialise with:
 Compile SASS using gulp:
 
     gulp sass // Compile sass
-    gulp sass:watch // To watch and compile as files changes
+    gulp sass:watch // To watch and compile as files change
 
 Visit /style-guide (courtesy of [Bootswatch](https://bootswatch.com/default/)) to preview styles.
