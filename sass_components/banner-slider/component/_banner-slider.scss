@@ -1,0 +1,94 @@
+/**
+ * Components - banner-slider.scss
+ */
+
+// Basic list settings
+.banner {
+  margin: 0;
+  padding: 0;
+  @extend .list-unstyled;
+}
+
+// By default, allow size of banner to be dictated by the amount of (text) content.
+.banner-item {
+  position: relative;
+  overflow: hidden;
+  // Have the background image cover the slide and centered vertically and horizontally
+  background-size: cover;
+  background-position: 50% 50%;
+  max-height: $banner-max-height;
+}
+
+// By default (on small screens), very little horizontal padding on text as we want it to almost cover the width of the banner.
+.banner-copy {
+  text-align: center;
+  color: $banner-copy-color;
+  padding: $banner-copy-padding-default;
+}
+
+// A bit more horizontal padding on tablet screens
+@include breakpoint-min($screen-sm) {
+  .banner-copy {
+    padding: $banner-copy-padding-sm;
+  }
+}
+
+
+@include breakpoint-min($screen-md) {
+  .banner-item {
+    // Fix proportions of the banner on large screens
+    &:after {
+      content: '';
+      display: block;
+      padding-top: $banner-min-proportion;
+    }
+  }
+  // More horizonal padding
+  .banner-copy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: $banner-copy-padding-md;
+  }
+}
+
+@include breakpoint-min($screen-lg) {
+  // Even more horizonal padding :)
+  .banner-copy {
+    padding: $banner-copy-padding-lg;
+  }
+}
+
+.banner .title {
+  font-size: $font-size-banner-title-default;
+}
+
+.banner .subtitle {
+  font-size: $font-size-banner-subtitle-default;
+}
+
+@include breakpoint-min($screen-sm) {
+  .banner .title {
+    font-size: $font-size-banner-title-sm;
+  }
+
+  .banner .subtitle {
+    font-size: $font-size-banner-subtitle-sm;
+  }
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.banner .footer {
+  margin-top: $banner-footer-margin-top-default;
+}
+
+@include breakpoint-min($screen-sm) {
+  .banner .footer {
+    margin-top: $banner-footer-margin-top-sm;
+  }
+}

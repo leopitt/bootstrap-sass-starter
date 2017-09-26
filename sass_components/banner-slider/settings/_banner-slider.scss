@@ -1,0 +1,23 @@
+/**
+ * Settings - banner-slider.scss
+ */
+
+// Sets the minimum height/width ration of banner on smaller screens.
+$banner-min-proportion: 48%;
+// Max height of banner
+$banner-max-height: 426px;
+
+$banner-footer-margin-top-default: $padding-large-vertical;
+$banner-footer-margin-top-sm: ($padding-large-vertical * 2);
+
+$banner-copy-padding-default: 40px ($grid-gutter-width/2);
+$banner-copy-padding-sm: 60px 15%;
+$banner-copy-padding-md: 60px 25%;
+$banner-copy-padding-lg: 60px 33%;
+
+$banner-copy-color: #fff;
+
+$font-size-banner-title-default: $font-size-h2;
+$font-size-banner-subtitle-default: $font-size-h3;
+$font-size-banner-title-sm: $font-size-h1;
+$font-size-banner-subtitle-sm: $font-size-h2;

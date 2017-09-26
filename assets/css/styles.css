@@ -1343,7 +1343,7 @@ ol {
   ol ol {
     margin-bottom: 0; }
 
-.list-unstyled {
+.list-unstyled, .banner {
   padding-left: 0;
   list-style: none; }
 
@@ -8071,69 +8071,6 @@ button.close {
   clip: auto; }
 
 /**
- * Base - base.scss
- */
-body {
-  -webkit-font-smoothing: antialiased; }
-
-strong {
-  font-weight: 800; }
-
-/**
- * Base - headings.scss
- */
-/**
- * Components - misc.scss
- */
-/**
- * Components - row-width-default.scss
- */
-/**
- * Components - buttons.scss
- */
-/**
- * Components - button-groups.scss
- */
-/**
- * Components - nav-icons.scss
- */
-/**
- * Components - nav-secondary.scss
- */
-/**
- * Components - text.scss
- */
-/**
- * Components - links.scss
- */
-/**
- * Components - logo.scss
- */
-/**
- * Components - forms.scss
- */
-/**
- * Components - box.scss
- */
-/**
- * Components - navigation.scss
- */
-/**
- * Components - dropdowns.scss
- */
-/**
- * Components - list.scss
- */
-/**
- * Components - header.scss
- */
-/**
- * Components - navbar-toggle.scss
- */
-/**
- * Components - banner.scss
- */
-/**
  * Components - aligner.scss
  */
 .aligner-wrapper {
@@ -8149,50 +8086,76 @@ strong {
   text-align: center; }
 
 /**
- * Components - footer.scss
+ * Settings - banner-slider.scss
  */
 /**
- * Components - region.scss
+ * Components - banner-slider.scss
  */
+.banner {
+  margin: 0;
+  padding: 0; }
+
+.banner-item {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+  max-height: 426px; }
+
+.banner-copy {
+  text-align: center;
+  color: #fff;
+  padding: 40px 15px; }
+
+@media screen and (min-width: 768px) {
+  .banner-copy {
+    padding: 60px 15%; } }
+
+@media screen and (min-width: 992px) {
+  .banner-item:after {
+    content: '';
+    display: block;
+    padding-top: 48%; }
+  .banner-copy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 60px 25%; } }
+
+@media screen and (min-width: 1200px) {
+  .banner-copy {
+    padding: 60px 33%; } }
+
+.banner .title {
+  font-size: 30px; }
+
+.banner .subtitle {
+  font-size: 24px; }
+
+@media screen and (min-width: 768px) {
+  .banner .title {
+    font-size: 36px; }
+  .banner .subtitle {
+    font-size: 30px; } }
+
+.banner-image {
+  width: 100%; }
+
+.banner .footer {
+  margin-top: 10px; }
+
+@media screen and (min-width: 768px) {
+  .banner .footer {
+    margin-top: 20px; } }
+
 /**
- * Components - breadcrumbs.scss
+ * Base - base.scss
  */
+body {
+  -webkit-font-smoothing: antialiased; }
+
 /**
- * Componenet - blockquote.scss
- */
-/**
- * Components - wysiwyg.scss
- */
-/**
- * Components - table.scss
- */
-/**
- * Layout - row.scss
- */
-/**
- * Layout - misc.scss
- */
-/**
- * State - links.scss
- */
-/**
- * State - box.scss
- */
-/**
- * State - navigation.scss
- */
-/**
- * State - footer.scss
- */
-/**
- * State - dropdown-menu.scss
- */
-/**
- * State - buttons.scss
- */
-/**
- * State - nav-secondary.scss
- */
-/**
- * State - nav-icons.scss
+ * Base - headings.scss
  */

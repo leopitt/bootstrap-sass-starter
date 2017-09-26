@@ -7,10 +7,12 @@
 // 3rd party libraries
 @import 'font-awesome';
 
-// Custom libraries
-
 // Mixins
 @import 'mixins';
+
+// Custom libraries
+@import '../sass_components/aligner/styles';
+@import '../sass_components/banner-slider/styles';
 
 // Bootstrap customisations
 // Base
