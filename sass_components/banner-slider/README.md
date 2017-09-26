@@ -3,10 +3,12 @@ Add to your bootstrap sass files to produce a banner with text and bg image.
 
 Include aligner scss prior to this for vertical copy centering.
 
+Remove .lightslider-banner class to remove lightslider functionality.
+
 Typical banner HTML:
 
 ```html
-<ul class="banner">
+<ul class="banner lightslider-banner">
   <li class="banner-item" style="background-image: url(images/banner-blue-cat-eyes.jpg);">
     <div class="banner-copy">
       <div class="aligner-wrapper">
